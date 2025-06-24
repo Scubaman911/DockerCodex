@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  codex:
+    build: .
+    image: codex-cli:latest
+    environment:
+      - OPENAI_API_KEY
+    tty: true
+    stdin_open: true
+    command: tail -f /dev/null
